@@ -12,3 +12,6 @@ If you add a new configuration file, remember to add it to the
 ```bash
 nix run 'github:LesVu/nixvim_config'
 ```
+```bash
+nix run 'github:LesVu/nixvim_config'# -- file
+```

@@ -4,5 +4,10 @@
     ./options/bundles.nix
     ./plugins/bundles.nix
   ];
-  colorschemes.onedark.enable = true;
+  colorschemes.onedark = {
+    enable = true;
+    settings = {
+      style = "darker";
+    };
+  };
 }
