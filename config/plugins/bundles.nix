@@ -12,5 +12,6 @@
     ./treesitter.nix
     ./misc.nix
     ./conform.nix
+    ./luasnip.nix
   ];
 }
