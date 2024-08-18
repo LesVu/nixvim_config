@@ -4,6 +4,7 @@
     ./transparent.nix
     ./nvim-tree.nix
     ./comment.nix
+    ./codeium.nix
     ./floaterm.nix
     ./telescope.nix
     ./barbar.nix

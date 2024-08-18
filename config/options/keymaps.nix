@@ -11,12 +11,12 @@
       mode = "n";
     }
     {
-      action = "gcc";
+      action = "<Plug>(comment_toggle_linewise_current)";
       key = "<leader>/";
       mode = "n";
     }
     {
-      action = "gc";
+      action = "<Plug>(comment_toggle_linewise_visual)";
       key = "<leader>/";
       mode = "v";
     }
