@@ -5,5 +5,6 @@
     shfmt
     black
     prettierd
+    ripgrep
   ];
 }

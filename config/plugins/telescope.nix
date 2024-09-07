@@ -23,5 +23,6 @@
       ];
       set_env.COLORTERM = "truecolor";
     };
+    settings.pickers.find_files.hidden = true;
   };
 }
