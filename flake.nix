@@ -36,6 +36,17 @@
           _module.args.pkgs = import nixpkgs {
             inherit system;
             config.allowUnfree = true;
+            overlays = [
+              (final: prev:
+                {
+                  typescript-language-server = prev.typescript-language-server.overrideAttrs (old: {
+                    patches = (old.patches or [ ]) ++ [
+                      # or a relative path (relative to the current nix file)
+                      ./worker.patch
+                    ];
+                  });
+                })
+            ];
           };
           checks = {
             # Run `nix flake check .` to verify that your config is not broken

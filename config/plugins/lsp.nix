@@ -15,7 +15,7 @@
         rootDir = "function(fname) return require('lspconfig').util.root_pattern('deno.json', 'deno.jsonc')(fname) end";
       };
 
-      tsserver = {
+      ts-ls = {
         enable = true;
         rootDir = "function(fname) return require('lspconfig').util.find_package_json_ancestor(fname) end";
       };
