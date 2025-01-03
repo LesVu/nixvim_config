@@ -2,7 +2,7 @@
   plugins.lsp = {
     enable = true;
     servers = {
-      nil-ls.enable = true;
+      nil_ls.enable = true;
       html.enable = true;
       bashls.enable = true;
       jsonls.enable = true;
@@ -15,7 +15,7 @@
         rootDir = "function(fname) return require('lspconfig').util.root_pattern('deno.json', 'deno.jsonc')(fname) end";
       };
 
-      ts-ls = {
+      ts_ls = {
         enable = true;
         rootDir = "function(fname) return require('lspconfig').util.find_package_json_ancestor(fname) end";
       };

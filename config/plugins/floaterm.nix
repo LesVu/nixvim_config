@@ -2,11 +2,13 @@
   plugins.floaterm = {
     enable = true;
 
-    width = 0.8;
-    height = 0.8;
+    settings = {
+      keymap_toggle = "<C-t>";
 
-    title = "";
+      width = 0.8;
+      height = 0.8;
 
-    keymaps.toggle = "<C-t>";
+      title = "";
+    };
   };
 }
