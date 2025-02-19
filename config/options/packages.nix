@@ -6,5 +6,6 @@
     black
     prettierd
     ripgrep
-  ];
+    clang-tools
+ ];
 }

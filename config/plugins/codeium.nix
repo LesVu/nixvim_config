@@ -1,6 +1,6 @@
 {
   plugins.codeium-vim = {
-    enable = true;
+    enable = false;
     keymaps = {
       accept = "<Tab>";
       clear = "<M-c>";

@@ -18,6 +18,7 @@
         typescript = [ "prettierd" ];
         sh = [ "shfmt" ];
         python = [ "black" ];
+        c = [ "clang-format" ];
       };
 
     };
