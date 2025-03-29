@@ -1,4 +1,13 @@
-{
+{ pkgs, ... }: {
+  extraPackages = with pkgs; [
+    nixpkgs-fmt
+    stylua
+    shfmt
+    black
+    prettierd
+    clang-tools
+  ];
+
   plugins.conform-nvim = {
     enable = true;
     settings = {
@@ -19,9 +28,20 @@
         sh = [ "shfmt" ];
         python = [ "black" ];
         c = [ "clang-format" ];
+        "_" = [
+          "squeeze_blanks"
+          "trim_whitespace"
+          "trim_newlines"
+        ];
       };
-
+      formatters = {
+        _ = {
+          command = "${pkgs.gawk}/bin/gawk";
+        };
+        squeeze_blanks = {
+          command = "${pkgs.coreutils}/bin/cat";
+        };
+      };
     };
-
   };
 }

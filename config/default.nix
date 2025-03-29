@@ -1,8 +1,8 @@
 {
   # Import all your configuration modules here
   imports = [
-    ./options/bundles.nix
-    ./plugins/bundles.nix
+    ./options
+    ./plugins
   ];
   # colorschemes.onedark = {
   #   enable = true;
@@ -10,10 +10,11 @@
   #     style = "darker";
   #   };
   # };
-  colorschemes.nord = {
+  colorschemes.catppuccin = {
     enable = true;
     settings = {
-      italic = false;
+      flavour = "macchiato";
+      default_integrations = true;
     };
   };
 }
