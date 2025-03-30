@@ -31,11 +31,11 @@
             "            (n)"
           ];
         }
-        (padding 6)
+        (padding 2)
         {
           type = "button";
           val = "  Find File";
-          on_press.raw = "require('telescope.builtin').find_files";
+          on_press.__raw = "require('telescope.builtin').find_files";
           opts = {
             keymap = [
               "n"
@@ -85,7 +85,7 @@
         {
           type = "button";
           val = "󰈚  Recent Files";
-          on_press.raw = "require('telescope.builtin').oldfiles";
+          on_press.__raw = "require('telescope.builtin').oldfiles";
           opts = {
             keymap = [
               "n"
@@ -110,7 +110,7 @@
         {
           type = "button";
           val = "󰈭  Find Word";
-          on_press.raw = "require('telescope.builtin').live_grep";
+          on_press.__raw = "require('telescope.builtin').live_grep";
           opts = {
             keymap = [
               "n"
