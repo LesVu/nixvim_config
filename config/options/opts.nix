@@ -45,7 +45,7 @@
     # termguicolors = false; # Disables 24-bit RGB color in the |TUI|
 
     spell = false; # Highlight spelling mistakes (local to window)
-    wrap = false; # Prevent text from wrapping
+    wrap = true; # Prevent text from wrapping
 
     tabstop = 2; # Number of spaces a <Tab> in the text stands for (local to buffer)
     shiftwidth = 2; # Number of spaces used for each step of (auto)indent (local to buffer)
