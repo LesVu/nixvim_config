@@ -1,6 +1,6 @@
 {
   imports = [
     ./avante.nix
-    ./codeium.nix
+    ./windsurf.nix
   ];
 }
