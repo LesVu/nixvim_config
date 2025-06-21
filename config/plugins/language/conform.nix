@@ -1,6 +1,6 @@
 { pkgs, ... }: {
   extraPackages = with pkgs; [
-    nixpkgs-fmt
+    nixfmt-rfc-style
     stylua
     shfmt
     black
@@ -21,7 +21,7 @@
         end
       '';
       formatters_by_ft = {
-        nix = [ "nixpkgs_fmt" ];
+        nix = [ "nixfmt" ];
         lua = [ "stylua" ];
         javascript = [ "prettierd" ];
         typescript = [ "prettierd" ];
