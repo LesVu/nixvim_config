@@ -19,16 +19,23 @@
 
         denols = {
           enable = true;
-          autostart = false;
-          rootMarkers = [
-            "deno.json"
-            "deno.jsonc"
-          ];
+          extraOptions.root_dir.__raw = "require('lspconfig').util.root_pattern('deno.json', 'deno.jsonc')";
         };
 
         ts_ls = {
           enable = true;
-          rootMarkers = [ "package.json" ];
+          extraOptions = {
+            single_file_support = false;
+            root_dir.__raw = ''
+              function (filename, bufnr)
+                local denoRootDir = require('lspconfig').util.root_pattern("deno.json", "deno.json")(filename);
+                if denoRootDir then
+                  return nil;
+                end
+                return require('lspconfig').util.root_pattern("package.json")(filename);
+              end
+            '';
+          };
         };
 
         yamlls = {
