@@ -1,7 +1,7 @@
 {
   plugins.alpha = {
     enable = true;
-    layout =
+    settings.layout =
       let
         padding = val: {
           type = "padding";
@@ -159,4 +159,3 @@
       ];
   };
 }
-

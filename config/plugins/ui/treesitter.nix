@@ -1,4 +1,5 @@
-{ config, ... }: {
+{ config, ... }:
+{
   plugins = {
     treesitter = {
       enable = true;
@@ -28,10 +29,10 @@
 
     treesitter-refactor = {
       inherit (config.plugins.treesitter) enable;
-      highlightDefinitions = {
+      settings.highlight_definitions = {
         enable = true;
         # Set to false if you have an `updatetime` of ~100.
-        clearOnCursorMove = false;
+        clear_on_cursor_move = false;
       };
     };
   };

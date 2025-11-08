@@ -2,58 +2,60 @@
   plugins = {
     lspsaga = {
       enable = true;
-      beacon.enable = true;
-      ui.border = "rounded"; # One of none, single, double, rounded, solid, shadow
-      hover = {
-        openCmd = "!firefox";
-        openLink = "gx";
-      };
-      symbolInWinbar = {
-        enable = true; # Breadcrumbs
-        showFile = false;
-      };
+      settings = {
+        beacon.enable = true;
+        ui.border = "rounded"; # One of none, single, double, rounded, solid, shadow
+        hover = {
+          open_cmd = "!firefox";
+          open_link = "gx";
+        };
+        symbol_in_winbar = {
+          enable = true; # Breadcrumbs
+          show_file = false;
+        };
 
-      codeAction = {
-        showServerName = true;
-        numShortcut = false;
-        onlyInCursor = false;
-        keys = {
+        code_action = {
+          show_server_name = true;
+          num_shortcut = false;
+          only_in_cursor = false;
+          keys = {
+            exec = "<CR>";
+            quit = [
+              "<Esc>"
+              "q"
+            ];
+          };
+        };
+
+        lightbulb = {
+          enable = false;
+          sign = false;
+        };
+
+        rename.keys = {
           exec = "<CR>";
           quit = [
+            "<C-k>"
             "<Esc>"
-            "q"
           ];
+          select = "x";
         };
-      };
 
-      lightbulb = {
-        enable = false;
-        sign = false;
-      };
-
-      rename.keys = {
-        exec = "<CR>";
-        quit = [
-          "<C-k>"
-          "<Esc>"
-        ];
-        select = "x";
-      };
-
-      outline = {
-        closeAfterJump = true;
-        layout = "normal"; # normal or float
-        winPosition = "right"; # left or right
-        keys = {
-          jump = "e";
-          quit = "q";
-          toggleOrJump = "o";
+        outline = {
+          close_after_jump = true;
+          layout = "normal"; # normal or float
+          win_position = "right"; # left or right
+          keys = {
+            jump = "e";
+            quit = "q";
+            toggle_or_jump = "o";
+          };
         };
-      };
 
-      scrollPreview = {
-        scrollUp = "<C-d>";
-        scrollDown = "<C-u>";
+        scroll_preview = {
+          scroll_up = "<C-d>";
+          scroll_down = "<C-u>";
+        };
       };
     };
 
@@ -177,4 +179,3 @@
     }
   ];
 }
-
